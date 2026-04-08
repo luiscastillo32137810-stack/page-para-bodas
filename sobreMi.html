@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Villa | Portafolio de Bodas</title>
+    <link rel="stylesheet" href="css/style-sobreMi.css">
+</head>
+<body>
+
+<header class="cabecera">
+    <div class="logo">
+        <h1>jose villa</h1>
+        <span>photographer</span>
+    </div>
+
+    <div class="menu-icon" id="menuIcon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="bodas.html">Inicio</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="#">Sobre Mí</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="perfil-simple">
+    <img src="imagenes/foto-perfil.jpg" alt="Retrato de Jose Villa">
+</div>
+<section class="tarjeta-info">
+  <div class="contenido-texto">
+    <p>Nombrado uno de los mejores fotógrafos de bodas por Martha Stewar Weddings, Harpers Bazaar, Style Me Pretty y Vogue; uno de los 10 mejores fotógrafos de bodas del mundo por la revista American Photo, y uno de los fotógrafos más influyente de nuestra decada por PDN.</p>
+    
+    <a href="mailto:tu-correo@ejemplo.com" class="boton-contacto">CONTACTAME</a>
+  </div>
+</section>
+<section class="biografia">
+  <div class="texto-contenido">
+    <h2>SOBRE JOSE VILLA</h2>
+    <p>la gente a menudo me pregunta cómo desarrolar mi estilo y cómo creo imágenes que destacan en el mercado de bodas actual, que es altamente competitivo...</p>
+    <p>Me siento honrado de decir que he sido publicado en muchas revisitas de todo el mundo, incluyendo Martha Stewart Weddings, Vogue...</p>
+  </div>
+</section>
+<script>
+    // --- JAVASCRIPT PARA LA INTERACCIÓN ---
+    
+    // Seleccionamos la hamburguesa y el menú
+    const menuIcon = document.getElementById('menuIcon');
+    const navMenu = document.getElementById('navMenu');
+
+    // Escuchamos el clic en la hamburguesa
+    menuIcon.addEventListener('click', () => {
+        // Alternamos (añadimos/quitamos) la clase 'active' a ambos
+        menuIcon.classList.toggle('active'); // Para animar la hamburguesa a 'X'
+        navMenu.classList.toggle('active');   // Para mostrar/ocultar el menú
+    });
+</script>
+<footer class="pie-pagina">
+  <div class="iconos-sociales">
+    <a href="#">Instagram</a> 
+  </div>
+  <p>&copy; 2026 Jose Villa Photography</p>
+  <div class="logo-pequeno">P</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* --- ESTILOS ORIGINALES Y BASE --- */
+        .body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', serif; /* Mantengo tu tipografía */
+        }
+
+        .cabecera {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: white;
+            text-transform: uppercase;
+            position: relative; /* Importante para el menú desplegable */
+            z-index: 1000; /* Asegura que la cabecera esté por encima de todo */
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            letter-spacing: 4px;
+            font-weight: lighter;
+            color: black; /* Color por defecto */
+        }
+
+        .logo span {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #888; /* Tu color gris original */
+            display: block; /* Para que el span baje en tu HTML original */
+        }
+
+        /* --- ESTILOS DE LA HAMBURGUESA --- */
+        .menu-icon {
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001; /* Por encima del menú desplegable */
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 2px;
+            background-color: black; /* Color de las rayas */
+            margin: 6px 0;
+            transition: 0.4s; /* Animación suave para la hamburguesa */
+        }
+
+        /* Animación de la hamburguesa a 'X' cuando está activo */
+        .menu-icon.active .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .menu-icon.active .bar2 {
+            opacity: 0; /* Oculta la raya del medio */
+        }
+        .menu-icon.active .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* --- ESTILOS DEL MENÚ DESPLEGABLE --- */
+        .nav-menu {
+            position: absolute;
+            top: 100%; /* Empieza justo donde termina la cabecera */
+            left: 0;
+            width: 100%;
+            background-color: white; /* Mismo color de fondo */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+            
+            /* Oculto por defecto */
+            display: none; 
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Animación de aparecer */
+        }
+
+        /* Clase que activa el menú (se añade con JS) */
+        .nav-menu.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-menu li {
+            padding: 15px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: black; /* Color del texto de los enlaces */
+            font-size: 16px;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        /* Efecto al pasar el ratón por los enlaces */
+        .nav-menu a:hover {
+            color: #888; /* Usa tu gris original al hover */
+        }
+
+
+
+/*APARTADO DE SLIDER*/
+.carrusel {
+	position: relative;
+	width: 100%;/*ajuste del ancho*/
+	max-width: 400px;/*CMABIA EL HANCO DEL SLIDER */
+	margin: auto;
+	overflow: hidden; /*Esconde las fotos que no están activas */
+}
+
+.carrusel-fotos {
+	display: flex;
+	transition: transform 0.5s ease-in-out; /*Hace que el moviminto sea suave*/	
+}
+
+.carrusel-fotos img { 
+	width: 100%;/*Cada foto ocupa todo el contenedor*/
+	flex-shrink: 0;
+    height: 400px; /*CMABIA ESTE NUEMERO APAR AJUSTAR LO LARGO A TU GUSTO */
+    object-fit: cover;/*ESTO EVITARA QUE LA IMAGEN SE DEFOMER AL CAMBIAR EL TAMAÑO*/
+}
+
+.btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.7);
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+.anterior {left: 10px;}
+.siguiente {right: 10px;}
+
+/* TODO ESTO DE AQUI A BAJO ES EL APARTADO DE EL FORMULARIOM DE CONTACTO */
+
+/* Centra todo y pone letra sencilla */
+.contacto { 
+  max-width: 400px; 
+  margin: auto; 
+  text-align: center; 
+  font-family: sans-serif;
+}
+
+/* El truco: quitar bordes y dejar solo el de abajo */
+input, textarea { 
+  width: 100%; 
+  border: none; 
+  border-bottom: 1px solid #ccc; 
+  margin-bottom: 20px;
+  outline: none;
+}
+
+/* Botón negro simple */
+button { 
+  background: black; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer;
+}
+
+/* Espaciado para la info de abajo */
+.info { margin-top: 40px; font-size: 12px; }

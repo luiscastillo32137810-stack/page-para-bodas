@@ -1,0 +1,67 @@
+/* --- ESTILOS BASE (Mantenidos para el menú) --- */
+.body { margin: 0; padding: 0; font-family: 'Times New Roman', serif; }
+.cabecera { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; text-transform: uppercase; position: relative; z-index: 1000; }
+.logo h1 { font-size: 24px; margin: 0; letter-spacing: 4px; font-weight: lighter; color: black; }
+.logo span { font-size: 10px; letter-spacing: 3px; color: #888; display: block; }
+
+/* --- ESTILOS DE LA HAMBURGUESA (INTACTOS) --- */
+.menu-icon { cursor: pointer; padding: 10px; z-index: 1001; }
+.menu-icon div { width: 30px; height: 2px; background-color: black; margin: 6px 0; transition: 0.4s; }
+.menu-icon.active .bar1 { transform: rotate(-45deg) translate(-5px, 6px); }
+.menu-icon.active .bar2 { opacity: 0; }
+.menu-icon.active .bar3 { transform: rotate(45deg) translate(-5px, -6px); }
+.nav-menu { position: absolute; top: 100%; left: 0; width: 100%; background-color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: none; opacity: 0; transition: opacity 0.5s ease; }
+.nav-menu.active { display: block; opacity: 1; }
+.nav-menu ul { list-style: none; margin: 0; padding: 20px 0; text-align: center; }
+.nav-menu li { padding: 15px 0; }
+.nav-menu a { text-decoration: none; color: black; font-size: 16px; letter-spacing: 2px; transition: color 0.3s ease; }
+.nav-menu a:hover { color: #888; }
+
+/* ============================================================
+   AJUSTES DE IMÁGENES Y CENTRADO (SOLO PARA EL PORTAFOLIO)
+   ============================================================ */
+
+.portafolio-item {
+    width: 100%;
+    display: block;   /* Cambiado a block para asegurar compatibilidad */
+    text-align: center; /* Esto centra todo el contenido (imagen y texto) */
+    padding: 50px 0;
+}
+
+.portafolio-wrapper {
+    display: inline-block; /* Permite que el contenedor se centre con text-align */
+    width: 90%;
+    max-width: 350px;      /* Ancho máximo de la foto */
+    text-align: center;    /* Centra el título y texto dentro */
+}
+
+.portafolio-imagen, .portafolio-imagen-bw {
+    display: block;
+    margin: 0 auto 25px auto; /* Margen auto a los lados centra la imagen */
+    
+    /* --- AQUÍ CONTROLAS EL TAMAÑO --- */
+    width: 100%;      
+    height: 350px;    /* Cambia este número para que todas midan lo mismo de alto */
+    /* -------------------------------- */
+
+    object-fit: cover; /* Importante: recorta la foto para que no se estire */
+}
+
+.portafolio-imagen-bw {
+    filter: grayscale(100%);
+}
+
+.portafolio-titulo {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.portafolio-texto {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    max-width: 550px;
+    margin: 0 auto; /* Centra el bloque de texto debajo de la foto */
+}

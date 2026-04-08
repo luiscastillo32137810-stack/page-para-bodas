@@ -1,0 +1,193 @@
+/* --- ESTILOS ORIGINALES Y BASE --- */
+        .body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', serif; /* Mantengo tu tipografía */
+        }
+
+        .cabecera {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: white;
+            text-transform: uppercase;
+            position: relative; /* Importante para el menú desplegable */
+            z-index: 1000; /* Asegura que la cabecera esté por encima de todo */
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            letter-spacing: 4px;
+            font-weight: lighter;
+            color: black; /* Color por defecto */
+        }
+
+        .logo span {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #888; /* Tu color gris original */
+            display: block; /* Para que el span baje en tu HTML original */
+        }
+
+        /* --- ESTILOS DE LA HAMBURGUESA --- */
+        .menu-icon {
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001; /* Por encima del menú desplegable */
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 2px;
+            background-color: black; /* Color de las rayas */
+            margin: 6px 0;
+            transition: 0.4s; /* Animación suave para la hamburguesa */
+        }
+
+        /* Animación de la hamburguesa a 'X' cuando está activo */
+        .menu-icon.active .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .menu-icon.active .bar2 {
+            opacity: 0; /* Oculta la raya del medio */
+        }
+        .menu-icon.active .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* --- ESTILOS DEL MENÚ DESPLEGABLE --- */
+        .nav-menu {
+            position: absolute;
+            top: 100%; /* Empieza justo donde termina la cabecera */
+            left: 0;
+            width: 100%;
+            background-color: white; /* Mismo color de fondo */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+            
+            /* Oculto por defecto */
+            display: none; 
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Animación de aparecer */
+        }
+
+        /* Clase que activa el menú (se añade con JS) */
+        .nav-menu.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-menu li {
+            padding: 15px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: black; /* Color del texto de los enlaces */
+            font-size: 16px;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        /* Efecto al pasar el ratón por los enlaces */
+        .nav-menu a:hover {
+            color: #888; /* Usa tu gris original al hover */
+        }
+
+/* ----ESTILO SIMPLE PARA LA FOTO DE PERFIL----- */
+.perfil-simple {
+  text-align: center; /* Centra la imagen */
+  margin: 20px auto;  /* Espacio arriba y abajo */
+}
+
+.perfil-simple img {
+  max-width: 400px;   /* Tamaño máximo de la foto */
+  width: 100%;        /* Se adapta si la pantalla es pequeña */
+  height: auto;       /* No se estira */
+  display: inline-block;
+}
+
+/* Sección de información y botón */
+.tarjeta-info {
+  background-color: #efefed; /* El color gris claro de fondo */
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contenido-texto p {
+  font-family: serif; /* Fuente elegante */
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.boton-contacto {
+  background-color: #1a1a1a; /* Botón negro */
+  color: #ffffff;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 2px; /* Separa un poco las letras */
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.boton-contacto:hover {
+  background-color: #444; /* Cambia de color al pasar el mouse */
+}
+
+
+/* ----ESTILOS PARA LOS PARRAFOS DE LA BIBLOGRAFIA---- */
+.biografia {
+  padding: 50px 10% ;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.biografia h2 {
+  font-family: serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.biografia p {
+  font-family: sans-serif; /* Puedes usar serif si prefieres */
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* Estilo para el Footer */
+.pie-pagina {
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 1px solid #eee; /* Una línea muy fina arriba */
+  margin-top: 50px;
+}
+
+.pie-pagina p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+.logo-pequeno {
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 2px 8px;
+  font-family: serif;
+  font-weight: bold;
+}
